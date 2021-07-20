@@ -13,8 +13,6 @@ export class AppComponent {
     return document.querySelector(selector);
   };
 
-
-
   next() {
     let hideText;
     if (this.$(".hide")) {
@@ -44,7 +42,7 @@ export class AppComponent {
 
     /* New Next */
 
-    this.$(".new-next").classList.remove("new-next");
+    this.$(".right-item").classList.remove("right-item");
 
     const addedEl = document.createElement('li');
     const para = document.createElement('p')
@@ -53,20 +51,20 @@ export class AppComponent {
     addedEl.appendChild(para)
     setTimeout(() => {
       this.$(".list").appendChild(addedEl);
-      addedEl.classList.add("next", "new-next", "rel", "leftshifting");
+      addedEl.classList.add("next", "right-item", "rel", "leftshifting");
     }, 450)
 
   }
 
   prev() {
     let newNextText;
-    newNextText = this.$(".new-next").innerText;
-    this.$(".new-next").remove();
+    newNextText = this.$(".right-item").innerText;
+    this.$(".right-item").remove();
 
 
     /* Step */
 
-    this.$(".next").classList.add("new-next");
+    this.$(".next").classList.add("right-item");
 
     this.$(".act").classList.add("next");
     this.$(".act").classList.remove("act", "center_item");
@@ -111,6 +109,6 @@ export class AppComponent {
         }
   }
 
- 
+
 
 }
