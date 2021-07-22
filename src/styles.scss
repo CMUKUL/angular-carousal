@@ -26,8 +26,8 @@ body {
     align-items: center;
 }
 
-.pdl12 {
-    padding-left: 12rem;
+.pdl13 {
+    padding-left: 12.7rem;
 }
 
 .pdr2 {
@@ -141,6 +141,8 @@ body {
     width: 5rem;
     text-align: center;
     font-weight: bold;
+    line-height: 1.5rem;
+
 }
 
 .start_here {
@@ -196,7 +198,7 @@ body {
     margin-left: 12rem;
 }
 
-.tile,
+.tile0,
 .tile1,
 .tile2,
 .tile3,
@@ -216,6 +218,9 @@ body {
     position: absolute;
     z-index: 0;
     opacity: 0.1;
+}
+.tile0{
+    margin-left: 12rem;
 }
 
 .tile1 {
@@ -308,30 +313,9 @@ body {
         z-index: 0;
         position: absolute;
         margin-left: 23rem;
-        margin-top: 6rem;
+        margin-top: 4.5rem;
     }
 }
-
-// @media screen and (min-width: 870px) and (max-width: 1279px) {
-//     .main-menu {
-//         visibility: hidden;
-//     }
-//     .list .prev {
-//         transform: translateX(-220px) scale(.85);
-//         opacity: 1;
-//     }
-//     .list .next {
-//         transform: translateX(220px) scale(.85);
-//         opacity: 1;
-//     }
-//     .paragraph-text {
-//         z-index: 0;
-//         position: absolute;
-//         margin-left: 12rem;
-//         margin-top: 4rem;
-//     }
-// }
-
 @media screen and (max-width: 870px) {
     .paragraph-text {
         display: none;
@@ -341,9 +325,133 @@ body {
         display: none;
     }
     .box-content {
-        top: 73%
+        top: 73%;
+        line-height: 1.2rem
+    }
+    .ht3{
+        height: 3rem;
+    }
+    .mtnlogo{
+        width: 3.6rem;
+    }
+    .pdl13{
+        padding-left: 12.9rem;
     }
     
+}
+
+
+@media screen and (max-width: 430px) and (min-width:323px){
+    .paragraph-text {
+        display: none;
+    }
+    .tile13,.tile12,.tile11,.tile10,.tile9,.tile8,.tile7,.tile6,.tile5{
+        opacity: 0;
+        display: none;
+    }
+    .box-content {
+        left: 25%
+    }
+    .background{
+        margin: 0 45px;
+    }
+    .mgr20{
+        margin-right: 13rem;
+    }
+    .pdl13 {
+        padding-left: 5.4rem;
+    }
+    .tile0 {
+        margin-left: 4.5rem;
+    }
+    .tile1 {
+        margin-left: 9rem;
+    }
+    .tile2 {
+        margin-left: 13.5rem;
+    }
+    .tile3 {
+        margin-left: 18rem;
+    }
+    .tile4{
+        margin-left: 22.5rem;
+    }
+    
+    .start_here{
+        top: 85%;
+        left: 13%;
+    }
+    .list li{
+        width: 176px;
+    height: 200px;
+    margin-left: -90px;
+    }
+    .center_item {
+        height: 16rem !important;
+        margin-top: -1rem;
+    }
+    
+}
+@media screen and (max-width : 320px) {
+  
+    .paragraph-text {
+        display: none;
+    }
+    .box-content {
+        left: 15%;
+        line-height: 1rem;
+    }
+    .center_item .box-content{
+            width: 9rem
+    }
+    .mtnlogo {
+        width: 3rem;
+    }
+    .background{
+        margin: 0 45px;
+    }
+    .mgr20{
+        margin-right: 10rem;
+    }
+    .pdl13 {
+        padding-left: 5.7rem;
+    }
+    .tile13,.tile12,.tile11,.tile10,.tile9,.tile8,.tile7,.tile6,.tile5,.tile4,.tile3{
+        opacity: 0;
+        display: none;
+    }
+    .tile0 {
+        margin-left: 4.5rem;
+    }
+    .tile1 {
+        margin-left: 9rem;
+    }
+    .tile2 {
+        margin-left: 13.5rem;
+    }
+  
+    .list li {
+        width: 156px;
+        margin-left: -86px;
+    }
+    .box-content{
+        width: 8rem;
+        line-height: 1rem;
+
+    }
+    .start_here{
+        top: 85%;
+        left: 13%;
+    }
+    .list li{
+        width: 176px;
+    height: 200px;
+    margin-left: -90px;
+    }
+    .center_item {
+        height: 16rem !important;
+        margin-top: -1rem;
+    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
@@ -374,8 +482,12 @@ body {
     .paragraph-text {
         z-index: 0;
         position: absolute;
-        margin-left: 12rem;
-        margin-top: 4rem;
+         margin-left: 17rem;
+         margin-top: 6rem;
+    
+    }
+    .ht3{
+        height: 3.6rem;
     }
   
   }

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'carousel';
   SWIPE_ACTION = { LEFT: 'swipeleft', RIGHT: 'swiperight' };
-  direction = "";
+  tile = [...Array(14).keys()]
   $ = (selector: any) => {
     return document.querySelector(selector);
   };
