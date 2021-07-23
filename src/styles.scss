@@ -2,18 +2,22 @@
 
 html,
 body {
-    height: 100%;
-    min-height: 100%;
+    // height: 100%;
+    // min-height: 100%;
     background: #e2e0e0;
     font-family: Work sans regular;
+    overflow: hidden;
+}
+.dragCursor{
+    cursor: all-scroll;
 }
 
 .background {
     background-color: #E7F5F6;
-    margin: 0 130px;
+    margin: 0 120px;
     display: flex;
     justify-content: center;
-    height: 90vh;
+    height: 100vh;
 }
 
 .carousel-item image {
@@ -98,10 +102,10 @@ body {
     opacity: 1;
 }
 
-.list .prev,
-.list .next {
-    cursor: pointer;
-}
+// .list .prev,
+// .list .next {
+//     cursor: pointer;
+// }
 
 .temp {
     transform: translateX(840px) scale(.85);
@@ -213,7 +217,7 @@ body {
 .tile12,
 .tile13 {
     background-color: hsl(185, 32%, 46%);
-    height: 90vh;
+    height: 100vh;
     width: 15px;
     position: absolute;
     z-index: 0;
@@ -283,6 +287,34 @@ body {
     display: inline-block;
     margin: 12px 10px 0 10px;
 }
+.elemReverse {
+    animation: slidein 0.5s reverse;
+  }
+  
+  @keyframes slidein {
+    from {
+      left: -500px;
+      opacity: 0;
+    }
+    to {
+      left:-420px;
+      opacity: 1;
+    }
+  }
+
+  .elemForward{
+    animation: slideright 0.5s reverse;
+  }
+  @keyframes slideright {
+    from {
+     right: 500px;
+      opacity: 0;
+    }
+    to {
+      right:420px;
+      opacity: 0;
+    }
+  }
 
 @media only screen and (min-width: 1280px) {
     .hamburger-menu {
@@ -301,25 +333,48 @@ body {
         transition: opacity .5s, transform .5s;
         transform: translateX(-420px) scale(.85);
     }
-    // .list .right-item {
-    //     /* opacity: 0.5; */
-    // }
+ 
     .list .right-item {
         opacity: 1;
         transition: opacity .5s, transform .5s;
         transform: translateX(420px) scale(.85);
     }
+
     .paragraph-text {
         z-index: 0;
         position: absolute;
         margin-left: 23rem;
         margin-top: 4.5rem;
     }
+
+  
 }
-@media screen and (max-width: 870px) {
-    .paragraph-text {
-        display: none;
+@media screen and (max-width: 870px) and (min-width:450px){
+    .list .prev {
+        transform: translateX(-181px) scale(0.7);;
+        opacity: 1;
     }
+    .list .next {
+        transform: translateX(181px) scale(0.7);;
+        opacity: 1;
+    }
+  
+    .list .hide{
+      transform: translateX(-181px) scale(0);
+      opacity: 0;
+    }
+    .list .right-item {
+        transform: translateX(181px) scale(0);
+        opacity: 0;
+        }
+
+     .paragraph-text {
+    //     display: none;
+        position: absolute;
+        left: 19%;
+        top: 32%;
+     }
+  
     .tile13,.tile12,.tile11,.tile10,.tile9,.tile8,.tile7,.tile6{
         opacity: 0;
         display: none;
@@ -339,18 +394,28 @@ body {
     }
     
 }
+// @media screen and (max-width: 375px) and (){
+    
+// }
 
 
 @media screen and (max-width: 430px) and (min-width:323px){
+    // .list .next, .list .prev {
+    //      transform: translateX(181px) scale(0.7); 
+    //     opacity: 0;
+    // }
     .paragraph-text {
         display: none;
     }
-    .tile13,.tile12,.tile11,.tile10,.tile9,.tile8,.tile7,.tile6,.tile5{
+    .tile13,.tile12,.tile11,.tile10,.tile9,.tile8,.tile7,.tile6,.tile5,.tile4{
         opacity: 0;
         display: none;
     }
     .box-content {
-        left: 25%
+        left: 25%;
+        position: absolute;
+        top: 70%;
+        line-height: 1.2rem;
     }
     .background{
         margin: 0 45px;
@@ -373,9 +438,9 @@ body {
     .tile3 {
         margin-left: 18rem;
     }
-    .tile4{
-        margin-left: 22.5rem;
-    }
+    // .tile4{
+    //     margin-left: 22.5rem;
+    // }
     
     .start_here{
         top: 85%;
@@ -393,14 +458,15 @@ body {
     
 }
 @media screen and (max-width : 320px) {
+    // .list .next, .list .prev {
+    //      transform: translateX(181px) scale(0.7); */
+    //     opacity: 0;
+    // }
   
     .paragraph-text {
         display: none;
     }
-    .box-content {
-        left: 15%;
-        line-height: 1rem;
-    }
+  
     .center_item .box-content{
             width: 9rem
     }
@@ -435,8 +501,10 @@ body {
         margin-left: -86px;
     }
     .box-content{
-        width: 8rem;
-        line-height: 1rem;
+        position: absolute;
+        top: 71%;
+        width: 5rem;
+        line-height: 1.2rem;
 
     }
     .start_here{
@@ -445,8 +513,8 @@ body {
     }
     .list li{
         width: 176px;
-    height: 200px;
-    margin-left: -90px;
+        height: 200px;
+        margin-left: -90px;
     }
     .center_item {
         height: 16rem !important;
@@ -483,7 +551,7 @@ body {
         z-index: 0;
         position: absolute;
          margin-left: 17rem;
-         margin-top: 6rem;
+         margin-top: 1rem;
     
     }
     .ht3{

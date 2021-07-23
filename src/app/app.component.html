@@ -62,22 +62,22 @@
         <div class = "tile{{item}}"></div>
     </ng-container>
     <div class="background">
-        <div (swipe)="onSwipe($event)">
-            <ul class="list">
-                <li class="hide rel">
+        <div (swipe)="onSwipe($event)" class="dragCursor">
+            <ul class="list dragCursor">
+                <li class="hide rel dragCursor">
                     <p class='box-content'>Mobile Internet</p>
                 </li>
-                <li class="prev rel">
+                <li class="prev rel dragCursor">
                     <p class='box-content'>Home Internet</p>
                 </li>
-                <li class="act center_item rel">
+                <li class="act center_item rel dragCursor">
                     <p class='box-content'>Get a device</p>
                     <p class="start_here">Start here ></p>
                 </li>
-                <li class="next rel">
+                <li class="next rel dragCursor">
                     <p class='box-content'>Add a phone-line</p>
                 </li>
-                <li class="next right-item rel">
+                <li class="next right-item rel dragCursor">
                     <p class='box-content'>Upgrade</p>
                 </li>
             </ul>

@@ -16,7 +16,7 @@ export class AppComponent {
   next() {
     let hideText;
     if (this.$(".hide")) {
-      hideText = this.$(".hide").innerText
+      hideText = this.$(".hide").innerText;
       this.$(".hide").remove();
     }
 
@@ -43,29 +43,28 @@ export class AppComponent {
     /* New Next */
 
     this.$(".right-item").classList.remove("right-item");
-
     const addedEl = document.createElement('li');
-    const para = document.createElement('p')
+    const para = document.createElement('p');
     para.classList.add("box-content");
     para.innerHTML = hideText;
-    addedEl.appendChild(para)
-    setTimeout(() => {
-      this.$(".list").appendChild(addedEl);
-      addedEl.classList.add("next", "right-item", "rel", "leftshifting");
-    }, 450)
-
+    addedEl.appendChild(para);
+    this.$(".list").appendChild(addedEl);
+    if(window.screen.availWidth > 1024){
+      addedEl.classList.add("next", "right-item", "rel","elemForward");
+    }else{
+      addedEl.classList.add("next", "right-item", "rel");
+    }
   }
 
   prev() {
     let newNextText;
-    newNextText = this.$(".right-item").innerText;
-    this.$(".right-item").remove();
-
-
-    /* Step */
-
+    if(this.$(".right-item")){
+      newNextText = this.$(".right-item").innerText;
+      this.$(".right-item").remove();
+    }
+  
+    
     this.$(".next").classList.add("right-item");
-
     this.$(".act").classList.add("next");
     this.$(".act").classList.remove("act", "center_item");
     if (this.$(".start_here")) {
@@ -89,10 +88,14 @@ export class AppComponent {
     para.classList.add("box-content");
     para.innerHTML = newNextText;
     addedEl.appendChild(para);
-    setTimeout(() => {
-      this.$(".list").insertBefore(addedEl, this.$(".list").firstChild);
-      addedEl.classList.add("hide", "rel");
-    }, 450)
+    this.$(".list").insertBefore(addedEl, this.$(".list").firstChild);
+
+    if(window.screen.availWidth > 1024){
+        addedEl.classList.add("hide", "rel","elemReverse");
+   }
+   else{
+     addedEl.classList.add("hide", "rel");
+   }
 
   }
 
