@@ -27,14 +27,14 @@ export class AppComponent {
       this.$(".prev").classList.remove("prev");
     }
 
-    this.$(".act").classList.add("prev");
-    this.$(".act").classList.remove("act", "center_item");
+    this.$(".act").classList.add("prev","backgroundSize");
+    this.$(".act").classList.remove("act", "center_item","backgroundSizeCenter");
     if (this.$(".start_here")) {
       this.$(".start_here").remove();
     }
 
-    this.$(".next").classList.add("act", "center_item");
-    this.$(".next").classList.remove("next");
+    this.$(".next").classList.add("act", "center_item","backgroundSizeCenter");
+    this.$(".next").classList.remove("next","backgroundSize");
     const start_here = document.createElement('p');
     start_here.classList.add("start_here")
     start_here.innerHTML = "Start Here >"
@@ -50,9 +50,9 @@ export class AppComponent {
     addedEl.appendChild(para);
     this.$(".list").appendChild(addedEl);
     if(window.screen.availWidth > 1024){
-      addedEl.classList.add("next", "right-item", "rel","elemForward");
+      addedEl.classList.add("next", "right-item", "rel","elemForward","backgroundSize");
     }else{
-      addedEl.classList.add("next", "right-item", "rel");
+      addedEl.classList.add("next", "right-item", "rel","backgroundSize");
     }
   }
 
@@ -65,14 +65,14 @@ export class AppComponent {
   
     
     this.$(".next").classList.add("right-item");
-    this.$(".act").classList.add("next");
-    this.$(".act").classList.remove("act", "center_item");
+    this.$(".act").classList.add("next","backgroundSize");
+    this.$(".act").classList.remove("act", "center_item","backgroundSizeCenter");
     if (this.$(".start_here")) {
       this.$(".start_here").remove();
     }
 
-    this.$(".prev").classList.add("act", "center_item");
-    this.$(".prev").classList.remove("prev");
+    this.$(".prev").classList.add("act", "center_item","backgroundSizeCenter");
+    this.$(".prev").classList.remove("prev","backgroundSize");
     const start_here = document.createElement('p');
     start_here.classList.add("start_here")
     start_here.innerHTML = "Start Here >"
@@ -91,10 +91,10 @@ export class AppComponent {
     this.$(".list").insertBefore(addedEl, this.$(".list").firstChild);
 
     if(window.screen.availWidth > 1024){
-        addedEl.classList.add("hide", "rel","elemReverse");
+        addedEl.classList.add("hide", "rel","elemReverse","backgroundSize");
    }
    else{
-     addedEl.classList.add("hide", "rel");
+     addedEl.classList.add("hide", "rel","backgroundSize");
    }
 
   }

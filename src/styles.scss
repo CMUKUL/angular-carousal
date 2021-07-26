@@ -2,8 +2,6 @@
 
 html,
 body {
-    // height: 100%;
-    // min-height: 100%;
     background: #e2e0e0;
     font-family: Work sans regular;
     overflow: hidden;
@@ -14,7 +12,7 @@ body {
 
 .background {
     background-color: #E7F5F6;
-    margin: 0 120px;
+    margin: 0 132px;
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -104,7 +102,6 @@ body {
     background-repeat: no-repeat, repeat;
     background-size: 115px 105px;
     background-position: 50% 20%;
-    // box-shadow: inset 0 -3em 3em rgb(0 0 0 / 8%), 0 0 0 1px white, 0.3em 0.3em 1em rgb(0 0 0 / 17%);
 }
 
 .list .act {
@@ -185,6 +182,11 @@ body {
 }
 .backgroundSize{
     background-size: 80px 80px !important;
+}
+.backgroundSizeCenter{
+    background-size: 115px 105px !important;
+
+    // background-size: 80px 80px !important;
 }
 .cursor {
     cursor: pointer;
