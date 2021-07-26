@@ -20,14 +20,14 @@
 
         <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto mgl5">
-                <li class="nav-item active pdr2">
-                    <a class="nav-link" href="#">Store <span class="sr-only">(current)</span></a>
+                <li class="nav-item active pdr24">
+                    <a class="nav-link font16" href="#">Store <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item pdr2">
-                    <a class="nav-link" href="#">Product & Services</a>
+                <li class="nav-item pdr24">
+                    <a class="nav-link font16" href="#">Product & Services</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Help & Support</a>
+                <li class="nav-item ">
+                    <a class="nav-link font16" href="#">Help & Support</a>
                 </li>
 
             </ul>
@@ -37,7 +37,7 @@
                 </li>
                 <span class="dot"></span>
                 <li class="nav-item dropdown mgr10">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle font12" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Personal
               </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -64,30 +64,30 @@
     <div class="background">
         <div (swipe)="onSwipe($event)" class="dragCursor">
             <ul class="list dragCursor">
-                <li class="hide rel dragCursor">
+                <li class="hide rel dragCursor backgroundSize">
                     <p class='box-content'>Mobile Internet</p>
                 </li>
-                <li class="prev rel dragCursor">
+                <li class="prev rel dragCursor backgroundSize">
                     <p class='box-content'>Home Internet</p>
                 </li>
                 <li class="act center_item rel dragCursor">
                     <p class='box-content'>Get a device</p>
                     <p class="start_here">Start here ></p>
                 </li>
-                <li class="next rel dragCursor">
+                <li class="next rel dragCursor backgroundSize">
                     <p class='box-content'>Add a phone-line</p>
                 </li>
-                <li class="next right-item rel dragCursor">
+                <li class="next right-item rel dragCursor backgroundSize">
                     <p class='box-content'>Upgrade</p>
                 </li>
             </ul>
         </div>
         <div class="arrow ">
             <span>
-                <img class="cursor mgr20" src="../assets/left.png" alt="left" (click)="next()">
+                <img class="cursor mgr20 arrowIcon" src="../assets/left.png" alt="left" (click)="next()">
             </span>
             <span>
-                <img class="cursor" src="../assets/right.png" alt="right" (click)="prev()">
+                <img class="cursor arrowIcon" src="../assets/right.png" alt="right" (click)="prev()">
             </span>
 
 

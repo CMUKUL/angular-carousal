@@ -61,6 +61,15 @@ body {
 .ml60 {
     margin-left: 60%;
 }
+.pdr24{
+    padding-right: 24px;
+}
+.font16{
+    font-size: 16px;
+}
+.font12{
+    font-size: 12px;
+}
 
 * {
     padding: 0;
@@ -69,7 +78,7 @@ body {
 
 body {
     overflow-x: hidden;
-    background: #fed5c8;
+    background:#F6CDCD;
 }
 
 .list {
@@ -101,11 +110,6 @@ body {
 .list .act {
     opacity: 1;
 }
-
-// .list .prev,
-// .list .next {
-//     cursor: pointer;
-// }
 
 .temp {
     transform: translateX(840px) scale(.85);
@@ -172,8 +176,16 @@ body {
 .arrow {
     position: absolute;
     top: 80%;
+   
 }
 
+.arrowIcon{
+    width: 40px;
+    height: 40px;
+}
+.backgroundSize{
+    background-size: 80px 80px !important;
+}
 .cursor {
     cursor: pointer;
 }
